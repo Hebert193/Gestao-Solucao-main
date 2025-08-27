@@ -1,0 +1,261 @@
+:root {
+            --primary-bg: #2b2e34;
+            --secondary-bg: #373a40;
+            --text-color: #f0f0f0;
+            --input-bg: #4b4e54;
+            --border-color: #555;
+            --accent-color: #4CAF50;
+            --light-toggle: #ccc;
+            --dark-toggle: #66bb6a;
+            --button-bg: #4b4e54;
+            --button-text: #f0f0f0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinhamento para o topo */
+            min-height: 100vh;
+        }
+
+        .settings-container {
+            width: 100%; /* Ocupa a largura total */
+            height: 100vh; /* Ocupa a altura total */
+            background-color: var(--primary-bg);
+            padding: 30px;
+            box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
+        .profile-section, .info-section, .theme-section {
+            background-color: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .profile-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .profile-text h4 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        .profile-text p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        .edit-image-btn {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .edit-image-btn svg {
+            margin-right: 5px;
+        }
+
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: #aaa;
+        }
+
+        .form-group input {
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .add-employee-link {
+            text-align: right;
+        }
+
+        .add-employee-link a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .theme-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .theme-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .theme-group label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: #aaa;
+        }
+
+        .color-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .color-option .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            margin-right: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .color-option .color-box.primary { background-color: #4CAF50; }
+        .color-option .color-box.secondary { background-color: #FFC107; }
+        
+        .color-option .color-box.active {
+            border-color: #f0f0f0;
+        }
+
+        .color-option label {
+            font-size: 1em;
+            color: var(--text-color);
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .dark-mode-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dark-mode-group label {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-right: 15px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--dark-toggle);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        .footer {
+            margin-top: auto; /* Empurra o footer para a parte de baixo */
+            text-align: right;
+        }
+
+        .save-btn {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        /* Estilos de modo escuro */
+        .dark-mode {
+            --primary-bg: #121212;
+            --secondary-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --input-bg: #2b2b2b;
+            --border-color: #444;
+            --button-bg: #3a3a3a;
+            --button-text: #e0e0e0;
+        }

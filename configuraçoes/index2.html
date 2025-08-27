@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Freedom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="header">
+            Configurações
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-info">
+                <img src="https://via.placeholder.com/50" alt="Logo">
+                <div class="profile-text">
+                    <h4>Nulo</h4>
+                    <p>@gmail.com</p>
+                </div>
+            </div>
+            <button class="edit-image-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3.5a.5.5 0 0 1 .168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10z"/>
+                </svg>
+                Editar imagem
+            </button>
+        </div>
+
+        <div class="info-section">
+            <div class="form-group">
+                <label for="company-name">Nome da empresa</label>
+                <input type="text" id="company-name" value="">
+            </div>
+            <div class="form-group">
+                <label for="gmail">Gmail</label>
+                <input type="email" id="gmail" value="">
+            </div>
+            <div class="form-group">
+                <label for="area">Área de atuação</label>
+                <input type="text" id="area" value="">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contato</label>
+                <input type="text" id="contact" value="">
+            </div>
+            <div class="form-group add-employee-link">
+                <a href="#">Adicionar funcionário</a>
+            </div>
+        </div>
+
+        <div class="theme-section">
+            <div class="theme-group">
+                <label>Tema</label>
+                <div class="color-option">
+                    <div class="color-box primary active" data-color="primary"></div>
+                    <label>Cor Primária</label>
+                </div>
+                <div class="color-option">
+                    <div class="color-box secondary" data-color="secondary"></div>
+                    <label>Cor Secundária</label>
+                </div>
+            </div>
+            <div class="dark-mode-group">
+                <label for="dark-mode-toggle">Modo escuro</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="save-btn">Salvar</button>
+        </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
